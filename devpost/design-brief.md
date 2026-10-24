@@ -1,5 +1,5 @@
 ---
-status: draft
+status: approved
 ---
 
 # Design brief: KINETIX TWIN
@@ -20,14 +20,15 @@ A mechanical engineering student sits at a desk. On the tabletop in front of the
 - Where the user is looking during the main task: down at the tabletop, roughly arm's length away
 - **Virtual tabletop:** flat surface anchored in front of the user at about (0, -18, -85) cm (default), slightly below eye level, roughly 80 cm wide × 50 cm deep (default)
 - **Two pucks:** sitting on the tabletop in parallel lanes, spaced ~25 cm apart (default), ~8 cm diameter each (default). The left lane is the reference puck; the right lane is the experimental puck
-- **Impact-point handle:** a bright marker on the top face of the experimental puck, constrained to slide along one radius from center to edge
+- **Impact-point handle:** a bright marker on the top face of the experimental puck, constrained to slide along one radius from center to edge. MVP uses four discrete snap positions (center, ¼-radius, ½-radius, edge) as large pinchable markers
+- **Experimental puck asymmetric marking:** the experimental puck must have a high-contrast asymmetric visual marking (stripe, arrow, or half-and-half color split) that makes rotation unambiguous in a single video frame
 - **3D vectors:** rendered directly on/near the experimental puck — **J** (yellow, impulse direction), **r** (white, center-to-handle offset), **ΔL = r × J** (magenta, perpendicular to both). Vectors update in real time as the handle moves, before launch
 - **Trajectory markers:** small dots or discs left behind both pucks at equal time intervals after launch, showing divergence
 - **Angular velocity readout (ω):** one small text pill anchored near the experimental puck on the table after it stops
 - **Control buttons (Launch / Reset):** on or near the front edge of the tabletop, angled toward the user (default ~−35°), big pinch targets. Not a floating screen — they sit on the furniture
 
 ## Hands and input
-- **Drag the impact-point handle:** pinch-grab and drag along the constrained radius (center ↔ edge of the experimental puck). The impulse direction is fixed and perpendicular to the radius so the angular impulse stays clear and controllable
+- **Select the impact point:** four discrete snap positions are marked on the experimental puck's top face along one radius — **center**, **¼-radius**, **½-radius**, and **edge**. Pinch any marker to select it as the impulse application point. The impulse direction is fixed and perpendicular to the radius so the angular impulse stays clear and controllable. Attempt continuous constrained dragging only after discrete selection works in Preview
 - **Launch:** pinch a large Launch button on the table edge. Fires both pucks simultaneously
 - **Reset:** pinch a large Reset button on the table edge. Restores both pucks to start positions, clears vectors and trajectory markers, returns the handle to center
 - Targets are big and highlight when aimed at
@@ -48,7 +49,7 @@ A mechanical engineering student sits at a desk. On the tabletop in front of the
 Each one can be checked in Lens Studio's preview.
 1. Drag the impact-point handle from center to edge on the experimental puck, and see the **r** vector and **ΔL** arrow update in real time before launch.
 2. Pinch the Launch button: both pucks fire simultaneously. The reference puck slides straight without impulse-induced spin; the experimental puck slides and visibly rotates. Both leave trajectory markers.
-3. Walk around the table (WASD in preview) and inspect the persistent vectors and trails from different angles after the pucks stop.
+3. Walk around the table (WASD in preview) and inspect the persistent vectors and trails from different angles after the pucks stop. *(Manual preview check only — do not write a LEAF scenario for this criterion.)*
 4. Pinch Reset: both pucks return to start, vectors and trails clear, handle returns to center. Repeat with a different offset and get a consistent result.
 
 ## Out of scope
@@ -68,6 +69,14 @@ Each one can be checked in Lens Studio's preview.
 - **Single-world puck isolation:** Two pucks in one WorldComponent must not collide with each other. Verify that collision filtering (layers or intangible flags) keeps the lanes independent.
 - **Rotation visibility:** A uniform puck may not show rotation clearly. Visible surface markings (a stripe, a dot pattern, or an asymmetric color split) are needed so spin is obvious. The specific visual treatment is a build-time decision.
 - **Mouse-as-pinch drag fidelity:** Dragging the handle along a constrained radius with the mouse-as-one-hand pinch in preview needs to feel reliable. If the interaction is too fiddly, fall back to discrete preset positions (center, ¼, ½, ¾, edge).
+
+## Fallback behaviors
+If a primary approach fails during build, use these fallbacks without asking:
+- **`addForceAt` unavailable or offset coordinates wrong:** Apply a linear impulse at the center of mass for translation, then separately apply an angular velocity (`BodyComponent.angularVelocity = ...`) scaled by the chosen offset. Document the workaround.
+- **`BodyComponent.angularVelocity` not readable:** Cut the ω readout entirely. The visual rotation alone carries the lesson.
+- **Discrete snap positions don't register pinch reliably:** Reduce to two positions (center and edge) with oversized colliders. If that also fails, use a single toggle button that cycles through positions.
+- **Collision filtering unavailable:** Offset the lanes far enough apart (50+ cm) that the pucks physically cannot reach each other. Document the workaround.
+- **Trajectory marker performance issues:** Reduce marker count (every 3rd frame instead of every frame) or switch to a line renderer if available.
 - **Impulse magnitude tuning:** The impulse must be strong enough to produce visible motion and spin on the flat tabletop but not launch the pucks off the table. Tuning is a build-time task.
 - **Angular impulse vs. torque:** All labels and readouts must use angular impulse (ΔL = r × J) since the impulse is instantaneous (ForceMode.Impulse), not torque (τ = r × F). This is a correctness constraint, not a preference.
 

@@ -17,6 +17,7 @@ Workspaces/**
 *.lock
 
 # Shipped by Lens Studio
+
 # BEGIN Lens Studio managed Agents-Docs block
 .mcp.json
 .cursor/mcp.json

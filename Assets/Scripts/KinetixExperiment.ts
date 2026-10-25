@@ -544,7 +544,7 @@ export class KinetixExperiment extends BaseScriptComponent {
     }
     if (this.vectorRLabel) {
       this.vectorRLabel.enabled = hasOffset;
-      this.vectorRLabel.getTransform().setLocalPosition(new vec3(r * 0.5 + 0.6, 3.8, 0.4));
+      this.vectorRLabel.getTransform().setLocalPosition(new vec3(r * 0.5, 3.2, 0.0));
     }
 
     // VectorDeltaL: vertical arrow along +Y at puck center proportional to r * J
@@ -567,7 +567,7 @@ export class KinetixExperiment extends BaseScriptComponent {
     }
     if (this.vectorDeltaLLabel) {
       this.vectorDeltaLLabel.enabled = hasOffset;
-      this.vectorDeltaLLabel.getTransform().setLocalPosition(new vec3(1.5, 1.35 + deltaLHeight, 0));
+      this.vectorDeltaLLabel.getTransform().setLocalPosition(new vec3(-1.8, 1.35 + deltaLHeight + 0.3, 0.0));
     }
 
     // VectorJ & RefVectorJ: impulse arrows pointing in the direction of motion (-Z for AWAY, +Z for TOWARDS)
@@ -586,7 +586,7 @@ export class KinetixExperiment extends BaseScriptComponent {
       t.setLocalRotation(tipRot);
     }
     if (this.vectorJLabel) {
-      this.vectorJLabel.getTransform().setLocalPosition(new vec3(r + 1.1, 2.2, 8.8 * jSign));
+      this.vectorJLabel.getTransform().setLocalPosition(new vec3(r + 2.2, 2.0, 5.0 * jSign));
     }
 
     if (this.refVectorJ) {
@@ -600,7 +600,7 @@ export class KinetixExperiment extends BaseScriptComponent {
       t.setLocalRotation(tipRot);
     }
     if (this.refVectorJLabel) {
-      this.refVectorJLabel.getTransform().setLocalPosition(new vec3(0, 2.2, 8.8 * jSign));
+      this.refVectorJLabel.getTransform().setLocalPosition(new vec3(2.2, 2.0, 5.0 * jSign));
     }
 
     // RotationArcGroup around the base of ExperimentalPuck: visible whenever r > 0
@@ -931,7 +931,7 @@ export class KinetixExperiment extends BaseScriptComponent {
       return;
     }
     const puckPos = this.expPuck.getTransform().getLocalPosition();
-    const badgePos = new vec3(puckPos.x + 9.5, puckPos.y + 2.5, puckPos.z);
+    const badgePos = new vec3(puckPos.x + 12.0, puckPos.y + 2.5, puckPos.z);
     this.omegaTextObj.getTransform().setLocalPosition(badgePos);
     if (this.omegaPillGroup) {
       this.omegaPillGroup.getTransform().setLocalPosition(badgePos);

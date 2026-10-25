@@ -341,13 +341,13 @@ export class KinetixExperiment extends BaseScriptComponent {
       if (rmv && rmv.mainMaterial) {
         this.idleBtnMat = rmv.mainMaterial;
 
-        // Dark green for launch button and idle snap buttons
+        // Deep dark pine green for launch button and idle snap buttons (high contrast with white text)
         this.greenBtnMat = rmv.mainMaterial.clone();
-        this.greenBtnMat.mainPass.baseColor = new vec4(0.04, 0.28, 0.12, 1.0);
+        this.greenBtnMat.mainPass.baseColor = new vec4(0.02, 0.16, 0.07, 1.0);
 
-        // Vibrant emerald green for selected snap button
+        // Rich dark emerald green for selected snap button (dark enough so white text is never washed out!)
         this.activeGreenBtnMat = rmv.mainMaterial.clone();
-        this.activeGreenBtnMat.mainPass.baseColor = new vec4(0.10, 0.75, 0.35, 1.0);
+        this.activeGreenBtnMat.mainPass.baseColor = new vec4(0.05, 0.35, 0.16, 1.0);
 
         // Dark red for slow-mo and direction toggle buttons
         this.darkRedBtnMat = rmv.mainMaterial.clone();

@@ -929,9 +929,9 @@ export class KinetixExperiment extends BaseScriptComponent {
       }
 
       if (isTargetCleared) {
-        this.setGuidePrompt("🎯 BULLSEYE! Δt = 0.00s arrival & Keyhole slot cleared!");
+        this.setGuidePrompt("🎯 Keyhole slot cleared! Tap RESET or pinch an offset to test again.");
       } else {
-        this.setGuidePrompt("Eureka! Both arrived at Δt = 0.00s — Translation is independent of spin!");
+        this.setGuidePrompt("Step 4: Tap RESET or pinch an offset (0–3) to compare another trial.");
       }
 
       // Synchronized Finish Gate Pulse: both pucks cross at the exact same instant

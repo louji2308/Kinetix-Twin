@@ -4,11 +4,8 @@ studioVersion:
   patch: 1
   build: 26100516
   type: Public
-  buildFlavor: release
-  timestamp: 1791218063000
-  commit: 31cf4f69d53d8942888f490016bbf02a5346f51d
-coreVersion: 372
-clientVersion: 14.16
+coreVersion: 377
+clientVersion: 14.21
 updateCheckpoint: 107
 sceneId: 0a1ccb1a-fe88-4fbb-9883-e3af3c75fd99
 metaInfo:
@@ -18,7 +15,7 @@ metaInfo:
     []
   lensName: Kinetix Twin
   lensDescriptors:
-    []
+    - AI_MUTATED
   lensApplicableContext:
     - live_camera
     - reply_camera
@@ -31,6 +28,7 @@ metaInfo:
   platformBundlesEnabled: false
   iconHash: ""
   videoPreviewHash: ""
+  localizationsHash: ""
   fromTemplateName: Spectacles
   fromTemplateUrl: Lens Studio 5.21.0.26041305
   activationCamera: Front

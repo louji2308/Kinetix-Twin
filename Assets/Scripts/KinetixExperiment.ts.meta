@@ -1,0 +1,85 @@
+- !<AssetImportMetadata/846634a7-9092-4bdc-8cf9-9f6b55e0d282>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 74ca93be-b8fe-4f9c-bf73-90f0314dd99e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 74ca93be-b8fe-4f9c-bf73-90f0314dd99e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 191d63b5-70da-423f-98ef-6c38ef62a006
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/191d63b5-70da-423f-98ef-6c38ef62a006>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a9a31de5-deb9-464c-9e2a-c1ff27ca64e4
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    expPuck: false
+    handleIndicator: false
+    launchButtonObj: false
+    omegaTextObj: false
+    refPuck: false
+    resetButtonObj: false
+    snapPoint0: false
+    snapPoint1: false
+    snapPoint2: false
+    snapPoint3: false
+    trailContainer: false
+    vectorDeltaL: false
+    vectorJ: false
+    vectorR: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - refPuck: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      expPuck: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      handleIndicator: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      vectorR: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      vectorDeltaL: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      vectorJ: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      omegaTextObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      launchButtonObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      resetButtonObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      snapPoint0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      snapPoint1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      snapPoint2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      snapPoint3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      trailContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject refPuck
+    - // @input SceneObject expPuck
+    - // @input SceneObject handleIndicator
+    - // @input SceneObject vectorR
+    - // @input SceneObject vectorDeltaL
+    - // @input SceneObject vectorJ
+    - // @input SceneObject omegaTextObj
+    - // @input SceneObject launchButtonObj
+    - // @input SceneObject resetButtonObj
+    - // @input SceneObject snapPoint0
+    - // @input SceneObject snapPoint1
+    - // @input SceneObject snapPoint2
+    - // @input SceneObject snapPoint3
+    - // @input SceneObject trailContainer

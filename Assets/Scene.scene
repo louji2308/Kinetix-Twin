@@ -667,7 +667,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 4.500000, y: 1.250000, z: 2.300000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.450000, y: 1.450000, z: 1.450000}
+    Scale: {x: 1.850000, y: 1.850000, z: 1.850000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -1906,7 +1906,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: -4.500000, y: 1.250000, z: 2.300000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.450000, y: 1.450000, z: 1.450000}
+    Scale: {x: 1.850000, y: 1.850000, z: 1.850000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2034,7 +2034,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
+    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
   Text: W_striker = K_trans + K_rot
   Editable: false
   ShowEditingPreview: true
@@ -3052,7 +3052,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 22.000000, y: -12.500000, z: -70.000000}
+    Position: {x: 6.000000, y: -12.500000, z: -70.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.800000, y: 1.800000, z: 1.800000}
     HasSegmentScaleCompensation: false
@@ -5528,7 +5528,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
+    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
   Text: K_trans = 1/2 M v²
   Editable: false
   ShowEditingPreview: true
@@ -5843,7 +5843,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
+    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
   Text: + K_rot = 1/2 I ω²
   Editable: false
   ShowEditingPreview: true

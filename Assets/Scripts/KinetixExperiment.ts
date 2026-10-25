@@ -965,7 +965,7 @@ export class KinetixExperiment extends BaseScriptComponent {
       return;
     }
     const puckPos = this.expPuck.getTransform().getLocalPosition();
-    const badgePos = new vec3(puckPos.x + 12.0, puckPos.y + 2.5, puckPos.z);
+    const badgePos = new vec3(puckPos.x - 6.5, puckPos.y + 3.0, puckPos.z);
     this.omegaTextObj.getTransform().setLocalPosition(badgePos);
     if (this.omegaPillGroup) {
       this.omegaPillGroup.getTransform().setLocalPosition(badgePos);

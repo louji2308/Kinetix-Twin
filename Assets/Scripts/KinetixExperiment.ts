@@ -144,6 +144,10 @@ export class KinetixExperiment extends BaseScriptComponent {
   public launchDirection: "AWAY" | "TOWARDS" = "AWAY";
   private cyanMat: Material | null = null;
   private darkRedMat: Material | null = null;
+  private greenBtnMat: Material | null = null;
+  private activeGreenBtnMat: Material | null = null;
+  private darkRedBtnMat: Material | null = null;
+  private activeRedBtnMat: Material | null = null;
 
   private audioClick: AudioComponent | null = null;
   private audioLaunch: AudioComponent | null = null;
@@ -332,17 +336,28 @@ export class KinetixExperiment extends BaseScriptComponent {
   }
 
   private cacheButtonMaterials(): void {
-    if (this.launchButtonObj) {
-      const rmv = this.launchButtonObj.getComponent("Component.RenderMeshVisual") as RenderMeshVisual;
-      if (rmv && rmv.mainMaterial) {
-        this.darkRedMat = rmv.mainMaterial;
-        this.activeBtnMat = rmv.mainMaterial; // Dark red background for selected snap button!
-      }
-    }
     if (this.consoleSnapButtons.length > 1 && this.consoleSnapButtons[1]) {
       const rmv = this.consoleSnapButtons[1].getComponent("Component.RenderMeshVisual") as RenderMeshVisual;
       if (rmv && rmv.mainMaterial) {
         this.idleBtnMat = rmv.mainMaterial;
+
+        // Dark green for launch button and idle snap buttons
+        this.greenBtnMat = rmv.mainMaterial.clone();
+        this.greenBtnMat.mainPass.baseColor = new vec4(0.04, 0.28, 0.12, 1.0);
+
+        // Vibrant emerald green for selected snap button
+        this.activeGreenBtnMat = rmv.mainMaterial.clone();
+        this.activeGreenBtnMat.mainPass.baseColor = new vec4(0.10, 0.75, 0.35, 1.0);
+
+        // Dark red for slow-mo and direction toggle buttons
+        this.darkRedBtnMat = rmv.mainMaterial.clone();
+        this.darkRedBtnMat.mainPass.baseColor = new vec4(0.45, 0.06, 0.08, 1.0);
+
+        // Vibrant red for active toggle state
+        this.activeRedBtnMat = rmv.mainMaterial.clone();
+        this.activeRedBtnMat.mainPass.baseColor = new vec4(0.85, 0.12, 0.15, 1.0);
+
+        this.activeBtnMat = this.activeGreenBtnMat;
       }
     }
     if (this.refPuck) {
@@ -351,6 +366,17 @@ export class KinetixExperiment extends BaseScriptComponent {
       if (rmv && rmv.mainMaterial) {
         this.cyanMat = rmv.mainMaterial;
       }
+    }
+
+    if (this.launchButtonObj && this.greenBtnMat) {
+      const rmv = this.launchButtonObj.getComponent("Component.RenderMeshVisual") as RenderMeshVisual;
+      if (rmv) rmv.mainMaterial = this.greenBtnMat;
+    }
+    if (this.slowMoRmv && this.darkRedBtnMat) {
+      this.slowMoRmv.mainMaterial = this.darkRedBtnMat;
+    }
+    if (this.dirRmv && this.darkRedBtnMat) {
+      this.dirRmv.mainMaterial = this.darkRedBtnMat;
     }
   }
 
@@ -442,12 +468,12 @@ export class KinetixExperiment extends BaseScriptComponent {
       this.startZ = -70.0;
       this.initialVelocityZ = -28.0;
       if (this.dirLabelText) this.dirLabelText.text = "DIR: -Z";
-      if (this.dirRmv && this.idleBtnMat) this.dirRmv.mainMaterial = this.idleBtnMat;
+      if (this.dirRmv && this.darkRedBtnMat) this.dirRmv.mainMaterial = this.darkRedBtnMat;
     } else {
       this.startZ = -95.5;
       this.initialVelocityZ = +28.0;
       if (this.dirLabelText) this.dirLabelText.text = "DIR: +Z";
-      if (this.dirRmv && this.cyanMat) this.dirRmv.mainMaterial = this.cyanMat;
+      if (this.dirRmv && this.activeRedBtnMat) this.dirRmv.mainMaterial = this.activeRedBtnMat;
     }
 
     this.reset();
@@ -461,10 +487,10 @@ export class KinetixExperiment extends BaseScriptComponent {
       this.slowMoLabelText.text = this.isSlowMo ? "0.1x [ON]" : "0.1x SLOW";
     }
     if (this.slowMoRmv) {
-      if (this.isSlowMo && this.cyanMat) {
-        this.slowMoRmv.mainMaterial = this.cyanMat;
-      } else if (!this.isSlowMo && this.idleBtnMat) {
-        this.slowMoRmv.mainMaterial = this.idleBtnMat;
+      if (this.isSlowMo && this.activeRedBtnMat) {
+        this.slowMoRmv.mainMaterial = this.activeRedBtnMat;
+      } else if (!this.isSlowMo && this.darkRedBtnMat) {
+        this.slowMoRmv.mainMaterial = this.darkRedBtnMat;
       }
     }
     print(`[Kinetix] Slow-Mo: ${this.isSlowMo ? "0.10x Bullet-Time" : "1.0x Real-Time"}`);
@@ -504,13 +530,13 @@ export class KinetixExperiment extends BaseScriptComponent {
   }
 
   private updateConsoleButtonVisuals(): void {
-    if (!this.activeBtnMat || !this.idleBtnMat) return;
+    if (!this.activeGreenBtnMat || !this.greenBtnMat) return;
     for (let i = 0; i < this.consoleSnapButtons.length; i++) {
       const btn = this.consoleSnapButtons[i];
       if (!btn) continue;
       const rmv = btn.getComponent("Component.RenderMeshVisual") as RenderMeshVisual;
       if (rmv) {
-        rmv.mainMaterial = i === this.selectedSnapIndex ? this.activeBtnMat : this.idleBtnMat;
+        rmv.mainMaterial = i === this.selectedSnapIndex ? this.activeGreenBtnMat : this.greenBtnMat;
       }
     }
   }
@@ -690,6 +716,10 @@ export class KinetixExperiment extends BaseScriptComponent {
     this.trailSpawnTimer = 0.0;
     this.strikerPistonTimer = 0.25;
     this.impactRingTimer = 0.35;
+    if (this.launchButtonObj && this.activeGreenBtnMat) {
+      const rmv = this.launchButtonObj.getComponent("Component.RenderMeshVisual") as RenderMeshVisual;
+      if (rmv) rmv.mainMaterial = this.activeGreenBtnMat;
+    }
     this.setGuidePrompt("Step 3: Tracking translation (v0) and rotation (ω)...");
     this.setEurekaBannerVisible(false);
 
@@ -779,6 +809,10 @@ export class KinetixExperiment extends BaseScriptComponent {
     this.setOmegaReadoutVisible(false, 0.0);
     this.setEurekaBannerVisible(false);
     this.setGuidePrompt("Step 1: Pinch an offset button (r) to set the impulse hit point");
+    if (this.launchButtonObj && this.greenBtnMat) {
+      const rmv = this.launchButtonObj.getComponent("Component.RenderMeshVisual") as RenderMeshVisual;
+      if (rmv) rmv.mainMaterial = this.greenBtnMat;
+    }
     this.updateVectors();
     this.updateConsoleButtonVisuals();
     print(`[Kinetix] Reset complete. Selected r=${this.getSelectedOffset().toFixed(2)} cm`);

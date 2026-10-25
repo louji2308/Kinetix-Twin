@@ -7,7 +7,7 @@
     - !<own> f15d4f5f-e9e5-4f44-9d16-1dab3d3aa4ab
     - !<own> 238d1b55-89f2-4db1-9fc2-3c17560b1429
     - !<own> 51b5cf18-9838-44dd-872c-30ed98b57125
-    - !<own> 05e44351-8c1e-4252-b32a-86f68cf6f464
+    - !<own> 9bd85b5b-af40-4b72-817a-dc24c9cca9ec
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -295,36 +295,6 @@
     []
   Components:
     - !<own> 679740a9-c7c7-41c3-b78f-ac4c0f531190
-- !<SceneObject/05e44351-8c1e-4252-b32a-86f68cf6f464>
-  PrefabRemaps:
-    []
-  Name: LEAF Plugin Bridge
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 7b7eba01-9f47-4f08-a661-8195d337b1b0
-- !<SceneObject/066c1d70-abc3-46e9-a888-fb0e7abaf919>
-  PrefabRemaps:
-    []
-  Name: FinishLaserBeam
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 2.000000, z: -10.500000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 75.000000, y: 0.150000, z: 0.150000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 4673c451-4db3-440c-b699-dbd9404c6587
 - !<ScriptComponent/0847d2bb-a13f-4c4a-a404-169f67308f6f>
   PrefabRemaps:
     []
@@ -626,26 +596,6 @@
     - !<own> b54dc8b5-dbcf-4fcc-a310-fb436127cc60
   Components:
     []
-- !<RenderMeshVisual/119ab611-1d85-4d0f-af6d-92b37e87a805>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> a333f094-3bf6-4962-9dd1-1d58ad38a9cf
-  Mesh: !<reference> 1f6fcfb7-fca8-4708-958d-2feff2090178
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/11ac73c9-b802-4eb6-abf5-f73054ca7e20>
   PrefabRemaps:
     []
@@ -717,7 +667,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 4.500000, y: 1.250000, z: 2.300000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.100000, y: 1.100000, z: 1.100000}
+    Scale: {x: 1.450000, y: 1.450000, z: 1.450000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -854,7 +804,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 5.800000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 2.800000, y: 2.800000, z: 2.800000}
+    Scale: {x: 2.200000, y: 2.200000, z: 2.200000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -1307,6 +1257,22 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/2815b007-80ca-46eb-980d-1270dbf38e32>
+  PrefabRemaps:
+    []
+  Name: MessagingBridge
+  Enabled: true
+  ScriptAsset: !<reference> 9aa407db-2872-4afc-a162-cf7faf2a0f29
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<Skin/28e05826-1521-46fa-a54c-80f2957ec80c>
   PrefabRemaps:
     []
@@ -1477,21 +1443,6 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/2fedbc7a-78bc-475f-916c-837423f8a8e4>
-  PrefabRemaps:
-    []
-  Name: FinishGateBeam
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 7.200000, z: -10.500000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 77.199997, y: 0.600000, z: 1.200000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> e116c390-0c61-4c24-b28f-73a01835e9ec
 - !<SceneObject/314496ef-7e3e-4b92-bf59-7a691eddf7a8>
   PrefabRemaps:
     []
@@ -1955,7 +1906,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: -4.500000, y: 1.250000, z: 2.300000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.100000, y: 1.100000, z: 1.100000}
+    Scale: {x: 1.450000, y: 1.450000, z: 1.450000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2122,7 +2073,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
+    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
   Text: "DIR: -Z"
   Editable: false
   ShowEditingPreview: true
@@ -2148,26 +2099,6 @@
     LineSpacing: 1.000000
     CapitalizationOverride: None
   EnableBatching: false
-- !<RenderMeshVisual/4673c451-4db3-440c-b699-dbd9404c6587>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
-  Mesh: !<reference> a2da4c82-717f-4446-8f75-3368b28fb2cb
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/46b79537-a269-46f1-9483-500d7a4170d6>
   PrefabRemaps:
     []
@@ -2338,7 +2269,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 9.800000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 2.700000, y: 2.700000, z: 2.700000}
+    Scale: {x: 2.100000, y: 2.100000, z: 2.100000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2495,10 +2426,6 @@
     - !<own> d9e43794-914a-4bb9-b51e-c09f9559c5e9
     - !<own> f9174933-2373-4f51-9d22-30534a3d4589
     - !<own> e9bb7ad2-9f77-44fa-ad26-224c2df8360a
-    - !<own> b705be82-9150-499f-b8e5-8e4aa652a373
-    - !<own> c6f963cd-71c8-4240-b0b2-12429f459e16
-    - !<own> 2fedbc7a-78bc-475f-916c-837423f8a8e4
-    - !<own> 066c1d70-abc3-46e9-a888-fb0e7abaf919
     - !<own> 5d0f9479-6c24-485a-9ebc-834b0afa1c2f
     - !<own> bbb8313f-b1cb-44ce-80e7-a45ea7707229
     - !<own> bc6c9daf-81b5-4579-940a-64a6eba97fe2
@@ -2539,7 +2466,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
+    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
   Text: "Step 1: Pinch an offset button (r) to set the impulse hit point"
   Editable: false
   ShowEditingPreview: true
@@ -2857,9 +2784,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -0.600000, z: 6.200000}
+    Position: {x: 0.000000, y: -0.600000, z: 7.600000}
     Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.800000, y: 1.800000, z: 1.800000}
+    Scale: {x: 1.600000, y: 1.600000, z: 1.600000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -3197,22 +3124,6 @@
     - !<own> 3b4f5057-b516-4d3b-9c8d-14c81af2f505
   Components:
     []
-- !<ScriptComponent/7b7eba01-9f47-4f08-a661-8195d337b1b0>
-  PrefabRemaps:
-    []
-  Name: MessagingBridge
-  Enabled: true
-  ScriptAsset: !<reference> 9aa407db-2872-4afc-a162-cf7faf2a0f29
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
 - !<RenderMeshVisual/7c36d38a-10b7-487d-8c78-674576b3cf0e>
   PrefabRemaps:
     []
@@ -3276,7 +3187,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f0f15079-8701-4c89-8677-7f1721d1a514
+    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
   Text: Linear momentum (Δp = J) is 100% independent of spin!
   Editable: false
   ShowEditingPreview: true
@@ -3302,26 +3213,6 @@
     LineSpacing: 1.000000
     CapitalizationOverride: None
   EnableBatching: false
-- !<RenderMeshVisual/7f84163c-5009-432c-b8a9-7cf4185cb1cd>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> a333f094-3bf6-4962-9dd1-1d58ad38a9cf
-  Mesh: !<reference> 1f6fcfb7-fca8-4708-958d-2feff2090178
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/7fb3591f-54a2-4aee-b07d-fd10d56538c8>
   PrefabRemaps:
     []
@@ -3740,9 +3631,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 1.800000, z: 6.200000}
+    Position: {x: 0.000000, y: 0.200000, z: 6.800000}
     Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.500000, y: 1.500000, z: 1.500000}
+    Scale: {x: 1.350000, y: 1.350000, z: 1.350000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 8a2d7bb3-ea27-4b24-af18-4e2a5f3191a9
@@ -3850,6 +3741,21 @@
     []
   Components:
     []
+- !<SceneObject/9bd85b5b-af40-4b72-817a-dc24c9cca9ec>
+  PrefabRemaps:
+    []
+  Name: LEAF Plugin Bridge
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2815b007-80ca-46eb-980d-1270dbf38e32
 - !<SceneObject/9c3a7929-faa9-4369-a85c-c75a6ab4eee7>
   PrefabRemaps:
     []
@@ -3962,7 +3868,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
+    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
   Text: "SYNCHRONIZED ARRIVAL: Δt = 0.00s"
   Editable: false
   ShowEditingPreview: true
@@ -4244,7 +4150,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
+    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
   Text: 0.1x SLOW
   Editable: false
   ShowEditingPreview: true
@@ -4437,21 +4343,6 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
-- !<SceneObject/b705be82-9150-499f-b8e5-8e4aa652a373>
-  PrefabRemaps:
-    []
-  Name: FinishGateLeftPillar
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: -38.000000, y: 4.500000, z: -10.500000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.200000, y: 5.500000, z: 1.200000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 119ab611-1d85-4d0f-af6d-92b37e87a805
 - !<SceneObject/b786dabc-29e4-4cfa-8a84-f39604ffcbdd>
   PrefabRemaps:
     []
@@ -4961,21 +4852,6 @@
     []
   Components:
     - !<own> c638b8e1-0ca9-4af5-8cbc-0400e8fa7deb
-- !<SceneObject/c6f963cd-71c8-4240-b0b2-12429f459e16>
-  PrefabRemaps:
-    []
-  Name: FinishGateRightPillar
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 38.000000, y: 4.500000, z: -10.500000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.200000, y: 5.500000, z: 1.200000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 7f84163c-5009-432c-b8a9-7cf4185cb1cd
 - !<ScriptComponent/c8e031d3-a8a1-468a-a419-427f8556de4c>
   PrefabRemaps:
     []
@@ -5248,7 +5124,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 7.400000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 2.800000, y: 2.800000, z: 2.800000}
+    Scale: {x: 2.200000, y: 2.200000, z: 2.200000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -5769,26 +5645,6 @@
     - !<reference> c72f8b22-b510-4487-9fd2-7506cd1440ce
   Mesh: !<reference> 257ad973-6ee4-4da4-8049-1dd2427f16ca
   Skin: !<reference> 28e05826-1521-46fa-a54c-80f2957ec80c
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/e116c390-0c61-4c24-b28f-73a01835e9ec>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> a333f094-3bf6-4962-9dd1-1d58ad38a9cf
-  Mesh: !<reference> a2da4c82-717f-4446-8f75-3368b28fb2cb
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:

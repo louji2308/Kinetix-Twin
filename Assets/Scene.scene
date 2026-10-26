@@ -2223,7 +2223,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
+    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
   Text: "Step 1: Pinch an offset button (r) to set the impulse hit point"
   Editable: false
   ShowEditingPreview: true
@@ -2944,7 +2944,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
+    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
   Text: Linear momentum (Δp = J) is 100% independent of spin!
   Editable: false
   ShowEditingPreview: true
@@ -3625,7 +3625,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 73024cc0-24ad-428c-a087-f0b7827365dc
+    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
   Text: "SYNCHRONIZED ARRIVAL: Δt = 0.00s"
   Editable: false
   ShowEditingPreview: true

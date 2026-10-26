@@ -274,6 +274,27 @@ export class KinetixExperiment extends BaseScriptComponent {
     }
     this.eurekaBannerRoot = resolve("EurekaBannerRoot");
 
+    // Apply vibrant Teal color to Steps Prompt & Eureka Arrival Banner
+    const tealColor = new vec4(0.05, 0.90, 0.85, 1.0);
+    if (this.guidePromptText && this.guidePromptText.mainMaterial) {
+      this.guidePromptText.mainMaterial = this.guidePromptText.mainMaterial.clone();
+      this.guidePromptText.mainMaterial.mainPass.baseColor = tealColor;
+    }
+    if (this.eurekaBannerRoot) {
+      const titleObj = this.findInHierarchy(this.eurekaBannerRoot, "EurekaTitle");
+      const subObj = this.findInHierarchy(this.eurekaBannerRoot, "EurekaSub");
+      const titleText = titleObj ? (titleObj.getComponent("Component.Text3D") as Text3D) : null;
+      const subText = subObj ? (subObj.getComponent("Component.Text3D") as Text3D) : null;
+      if (titleText && titleText.mainMaterial) {
+        titleText.mainMaterial = titleText.mainMaterial.clone();
+        titleText.mainMaterial.mainPass.baseColor = tealColor;
+      }
+      if (subText && subText.mainMaterial) {
+        subText.mainMaterial = subText.mainMaterial.clone();
+        subText.mainMaterial.mainPass.baseColor = tealColor;
+      }
+    }
+
     // Discover Grand Champion Trinity Objects
     this.expEnergyRotBar = resolve("ExpEnergyRotBar");
     this.expEnergyLabel = resolve("ExpEnergyLabel");

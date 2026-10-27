@@ -267,7 +267,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 16.500000, y: 0.900000, z: -2.000000}
+    Position: {x: 16.500000, y: 1.200000, z: -2.000000}
     Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.150000, y: 1.150000, z: 1.150000}
     HasSegmentScaleCompensation: false
@@ -630,9 +630,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 4.500000, y: 1.250000, z: 2.300000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.850000, y: 1.850000, z: 1.850000}
+    Position: {x: 5.500000, y: 1.200000, z: 2.200000}
+    Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -1336,9 +1336,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -11.000000, y: 1.300000, z: 2.400000}
+    Position: {x: -16.500000, y: 1.200000, z: 2.200000}
     Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.400000, y: 1.400000, z: 1.400000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -1735,9 +1735,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -4.500000, y: 1.250000, z: 2.300000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.850000, y: 1.850000, z: 1.850000}
+    Position: {x: -5.500000, y: 1.200000, z: 2.200000}
+    Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -1911,7 +1911,7 @@
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   EnableRichText: false
   SizeToFit: false
-  FontSize: 20.000000
+  FontSize: 44.000000
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
   FontSource: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2230,8 +2230,8 @@
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   EnableRichText: false
   SizeToFit: false
-  FontSize: 28.000000
-  ExtrusionDepth: 0.400000
+  FontSize: 34.000000
+  ExtrusionDepth: 0.100000
   ExtrudeDirection: Both
   FontSource: !<reference> 00000000-0000-0000-0000-000000000000
   PreferredStyle: Regular
@@ -2541,8 +2541,8 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -2.200000, z: 9.200000}
-    Rotation: {x: -18.000000, y: 0.000000, z: 0.000000}
+    Position: {x: 0.000000, y: -0.600000, z: 7.850000}
+    Rotation: {x: -11.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.650000, y: 1.650000, z: 1.650000}
     HasSegmentScaleCompensation: false
   Children:
@@ -2944,15 +2944,15 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
+    - !<reference> 46897eb0-8387-471a-81f4-9beeb193b9e4
   Text: Linear momentum (Δp = J) is 100% independent of spin!
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   EnableRichText: false
   SizeToFit: false
-  FontSize: 22.000000
-  ExtrusionDepth: 0.400000
+  FontSize: 28.000000
+  ExtrusionDepth: 0.100000
   ExtrudeDirection: Both
   FontSource: !<reference> 00000000-0000-0000-0000-000000000000
   PreferredStyle: Regular
@@ -3097,9 +3097,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 11.000000, y: 1.300000, z: 2.400000}
+    Position: {x: 16.500000, y: 1.200000, z: 2.200000}
     Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.400000, y: 1.400000, z: 1.400000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -3164,7 +3164,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.650000, z: 0.000000}
+    Position: {x: 0.000000, y: 1.050000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -3404,8 +3404,8 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -0.200000, z: 7.400000}
-    Rotation: {x: -18.000000, y: 0.000000, z: 0.000000}
+    Position: {x: 0.000000, y: -0.400000, z: 7.500000}
+    Rotation: {x: -11.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.250000, y: 1.250000, z: 1.250000}
     HasSegmentScaleCompensation: false
   Children:
@@ -3625,15 +3625,15 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f9e35b5f-5231-425d-9962-e8567125f1f5
+    - !<reference> 46897eb0-8387-471a-81f4-9beeb193b9e4
   Text: "SYNCHRONIZED ARRIVAL: Δt = 0.00s"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   EnableRichText: false
   SizeToFit: false
-  FontSize: 26.000000
-  ExtrusionDepth: 0.400000
+  FontSize: 36.000000
+  ExtrusionDepth: 0.100000
   ExtrudeDirection: Both
   FontSource: !<reference> 00000000-0000-0000-0000-000000000000
   PreferredStyle: Regular
@@ -3688,7 +3688,7 @@
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   EnableRichText: false
   SizeToFit: false
-  FontSize: 48.000000
+  FontSize: 56.000000
   ExtrusionDepth: 0.300000
   ExtrudeDirection: Both
   FontSource: !<reference> 00000000-0000-0000-0000-000000000000
@@ -3902,7 +3902,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -16.500000, y: 0.900000, z: -2.000000}
+    Position: {x: -16.500000, y: 1.200000, z: -2.000000}
     Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.150000, y: 1.150000, z: 1.150000}
     HasSegmentScaleCompensation: false
@@ -3930,7 +3930,7 @@
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   EnableRichText: false
   SizeToFit: false
-  FontSize: 20.000000
+  FontSize: 44.000000
   ExtrusionDepth: 0.400000
   ExtrudeDirection: Both
   FontSource: !<reference> 00000000-0000-0000-0000-000000000000
@@ -3956,7 +3956,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -0.650000, z: 0.000000}
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -4488,9 +4488,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -4.500000, y: 0.400000, z: 2.200000}
+    Position: {x: -5.500000, y: 0.400000, z: 2.200000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 6.800000, y: 0.700000, z: 3.200000}
+    Scale: {x: 9.800000, y: 0.700000, z: 3.200000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -4723,7 +4723,7 @@
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   EnableRichText: false
   SizeToFit: false
-  FontSize: 48.000000
+  FontSize: 56.000000
   ExtrusionDepth: 0.300000
   ExtrudeDirection: Both
   FontSource: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4864,9 +4864,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 4.500000, y: 0.400000, z: 2.200000}
+    Position: {x: 5.500000, y: 0.400000, z: 2.200000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 6.800000, y: 0.700000, z: 3.200000}
+    Scale: {x: 9.800000, y: 0.700000, z: 3.200000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -5304,9 +5304,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 11.000000, y: 0.400000, z: 2.200000}
+    Position: {x: 16.500000, y: 0.400000, z: 2.200000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 19.000000, y: 0.700000, z: 3.200000}
+    Scale: {x: 9.800000, y: 0.700000, z: 3.200000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -5533,7 +5533,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -5.500000, y: 0.900000, z: -2.000000}
+    Position: {x: -5.500000, y: 1.200000, z: -2.000000}
     Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.150000, y: 1.150000, z: 1.150000}
     HasSegmentScaleCompensation: false
@@ -6167,9 +6167,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -11.000000, y: 0.400000, z: 2.200000}
+    Position: {x: -16.500000, y: 0.400000, z: 2.200000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 19.000000, y: 0.700000, z: 3.200000}
+    Scale: {x: 9.800000, y: 0.700000, z: 3.200000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -6183,7 +6183,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 5.500000, y: 0.900000, z: -2.000000}
+    Position: {x: 5.500000, y: 1.200000, z: -2.000000}
     Rotation: {x: -22.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.150000, y: 1.150000, z: 1.150000}
     HasSegmentScaleCompensation: false

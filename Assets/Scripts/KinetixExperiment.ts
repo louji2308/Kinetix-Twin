@@ -274,8 +274,9 @@ export class KinetixExperiment extends BaseScriptComponent {
     }
     this.eurekaBannerRoot = resolve("EurekaBannerRoot");
 
-    // Apply vibrant Teal color to Steps Prompt & Eureka Arrival Banner
+    // Apply vibrant Teal color ONLY to the front Steps Prompt, and warm Orange to Eureka Arrival Banner
     const tealColor = new vec4(0.05, 0.90, 0.85, 1.0);
+    const orangeColor = new vec4(1.0, 0.52, 0.05, 1.0);
     if (this.guidePromptText && this.guidePromptText.mainMaterial) {
       this.guidePromptText.mainMaterial = this.guidePromptText.mainMaterial.clone();
       this.guidePromptText.mainMaterial.mainPass.baseColor = tealColor;
@@ -287,11 +288,11 @@ export class KinetixExperiment extends BaseScriptComponent {
       const subText = subObj ? (subObj.getComponent("Component.Text3D") as Text3D) : null;
       if (titleText && titleText.mainMaterial) {
         titleText.mainMaterial = titleText.mainMaterial.clone();
-        titleText.mainMaterial.mainPass.baseColor = tealColor;
+        titleText.mainMaterial.mainPass.baseColor = orangeColor;
       }
       if (subText && subText.mainMaterial) {
         subText.mainMaterial = subText.mainMaterial.clone();
-        subText.mainMaterial.mainPass.baseColor = tealColor;
+        subText.mainMaterial.mainPass.baseColor = orangeColor;
       }
     }
 
@@ -547,6 +548,15 @@ export class KinetixExperiment extends BaseScriptComponent {
   private setEurekaBannerVisible(visible: boolean): void {
     if (this.eurekaBannerRoot) {
       this.eurekaBannerRoot.enabled = visible;
+    }
+    if (this.guidePromptObj) {
+      if (visible) {
+        // Equal spacing: Row 3 sits at the exact same distance below Row 2 as Row 2 is below Row 1
+        this.guidePromptObj.getTransform().setLocalPosition(new vec3(0, -1.45, 7.85));
+      } else {
+        // At idle / reset: steps prompt brought forward cleanly
+        this.guidePromptObj.getTransform().setLocalPosition(new vec3(0, -0.60, 7.85));
+      }
     }
   }
 
